@@ -14,7 +14,7 @@ public class UserController {
     UserRepository userRepository;
 
     @GetMapping("/user/{id}")
-    public User getUser(@PathVariable("id") Integer id){
+    public User getUser( @PathVariable("id") Integer id){
         User user = userRepository.findOne(id);
         return user;
     }
@@ -24,5 +24,4 @@ public class UserController {
         User save = userRepository.save(user);
         return save;
     }
-
 }

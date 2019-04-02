@@ -15,11 +15,10 @@ public class HelloController {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-
     @ResponseBody
     @GetMapping("/query")
-    public Map<String,Object> map(){
-        List<Map<String, Object>> list = jdbcTemplate.queryForList("select * FROM department");
-        return list.get(0);
+    public Map<String, Object> map(){
+        List<Map<String, Object>> maps = jdbcTemplate.queryForList("select * from department");
+        return maps.get(0);
     }
 }

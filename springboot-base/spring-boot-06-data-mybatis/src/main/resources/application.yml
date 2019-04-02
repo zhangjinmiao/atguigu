@@ -1,12 +1,11 @@
 spring:
   datasource:
-#   数据源基本配置
     username: root
     password: 123456
+    url: jdbc:mysql://ip:3306/mybatis
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.15.22:3306/mybatis
     type: com.alibaba.druid.pool.DruidDataSource
-#   数据源其他配置
+
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -24,11 +23,8 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 mybatis:
-  # 指定全局配置文件位置
   config-location: classpath:mybatis/mybatis-config.xml
-  # 指定sql映射文件位置
   mapper-locations: classpath:mybatis/mapper/*.xml
-
 #    schema:
 #      - classpath:sql/department.sql
 #      - classpath:sql/employee.sql

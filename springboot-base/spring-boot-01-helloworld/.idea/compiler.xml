@@ -9,8 +9,5 @@
         <module name="spring-boot-01-helloworld" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="spring-boot-01-helloworld" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

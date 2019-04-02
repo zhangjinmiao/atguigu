@@ -1,6 +1,5 @@
 package com.atguigu.springboot.controller;
 
-
 import com.atguigu.springboot.bean.Department;
 import com.atguigu.springboot.bean.Employee;
 import com.atguigu.springboot.mapper.DepartmentMapper;
@@ -19,7 +18,6 @@ public class DeptController {
     @Autowired
     EmployeeMapper employeeMapper;
 
-
     @GetMapping("/dept/{id}")
     public Department getDepartment(@PathVariable("id") Integer id){
         return departmentMapper.getDeptById(id);
@@ -33,8 +31,6 @@ public class DeptController {
 
     @GetMapping("/emp/{id}")
     public Employee getEmp(@PathVariable("id") Integer id){
-       return employeeMapper.getEmpById(id);
+        return employeeMapper.getEmpById(id);
     }
-
-
 }

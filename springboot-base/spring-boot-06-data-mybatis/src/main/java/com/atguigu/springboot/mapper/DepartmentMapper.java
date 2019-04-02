@@ -1,11 +1,11 @@
 package com.atguigu.springboot.mapper;
 
+
 import com.atguigu.springboot.bean.Department;
 import org.apache.ibatis.annotations.*;
 
-
-//指定这是一个操作数据库的mapper
-//@Mapper
+// 指定這是一個操作數據庫的Mapper
+// @Mapper
 public interface DepartmentMapper {
 
     @Select("select * from department where id=#{id}")
@@ -14,10 +14,10 @@ public interface DepartmentMapper {
     @Delete("delete from department where id=#{id}")
     public int deleteDeptById(Integer id);
 
-    @Options(useGeneratedKeys = true,keyProperty = "id")
-    @Insert("insert into department(department_name) values(#{departmentName})")
+    @Options(useGeneratedKeys = true, keyProperty = "id") // 是否使用自動生成的主鍵
+    @Insert("insert into department(departmentName) values(#{departmentName})")
     public int insertDept(Department department);
 
-    @Update("update department set department_name=#{departmentName} where id=#{id}")
+    @Update("update department set departmentName=#{departmentName} where id=#{id}")
     public int updateDept(Department department);
 }
